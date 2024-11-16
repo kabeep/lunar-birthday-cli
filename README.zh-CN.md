@@ -4,8 +4,8 @@
 
 [![NodeJS][node-image]][node-url]
 [![Install Size][install-size-image]][install-size-url]
-[![XO code style][xo-code-style-image]][xo-code-style-url]
 [![NPM][npm-image]][npm-url]
+[![XO code style][xo-code-style-image]][xo-code-style-url]
 [![License][license-image]][license-url]
 
 [English][en-us-url] | 简体中文
