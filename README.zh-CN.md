@@ -10,6 +10,8 @@
 
 [English][en-us-url] | 简体中文
 
+![Insights][insights-image]
+
 <img width="814" src="docs/images/usage.zh-CN.png" alt="usage-png">
 
 </div>
@@ -82,6 +84,7 @@ birthday [选项] <日期>
 
 本项目采用 MIT 许可证。详情请见 [LICENSE][license-url] 文件。
 
+[insights-image]: https://repobeats.axiom.co/api/embed/e4a09620c99c8d950ca56671c3d1e736e835461f.svg
 
 [node-image]: https://img.shields.io/node/v/%40kabeep%2Flunar-birthday-cli?color=lightseagreen
 [node-url]: https://nodejs.org/
