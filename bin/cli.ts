@@ -15,7 +15,6 @@ const yellow = palette(33);
 main(
     yargs(hideBin(process.argv))
         .scriptName('birthday')
-        .locale('en-US')
         .usage(i18n('CMD_USAGE'))
         .options('mode', {
             alias: 'm',

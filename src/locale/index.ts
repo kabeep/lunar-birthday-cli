@@ -9,7 +9,6 @@ import zhCN from './zh-CN';
 import zhTW from './zh-TW';
 
 const getZhLocale = (code: string) => {
-    return enUS;
     switch (code) {
         case 'zh-CN': {
             return zhCN;
