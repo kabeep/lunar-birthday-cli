@@ -1,0 +1,62 @@
+{
+    "name": "@kabeep/lunar-birthday-cli",
+    "description": "A Node.js Library to list the lunar birthday in terminal",
+    "version": "0.1.0-rc",
+    "type": "module",
+    "main": "./dist/cli.js",
+    "types": "./dist/cli.d.ts",
+    "files": [
+        "dist"
+    ],
+    "bin": {
+        "birthday": "./dist/cli.js"
+    },
+    "scripts": {
+        "dev": "ts-node bin/cli.ts",
+        "prepare": "husky",
+        "lint": "xo src/**/*.ts --fix",
+        "build": "tsup",
+        "watch": "tsup --watch",
+        "stats": "yarn build && size-limit ./dist/cli.js && cloc src"
+    },
+    "dependencies": {
+        "@kabeep/lunar-date-fns": "^1.1.0",
+        "lodash.get": "^4.4.2",
+        "lodash.merge": "^4.6.2",
+        "lodash.template": "^4.5.0",
+        "os-locale": "^6.0.2",
+        "yargs": "^17.7.2"
+    },
+    "devDependencies": {
+        "@types/lodash.get": "^4.4.9",
+        "@types/lodash.merge": "^4.6.9",
+        "@types/lodash.template": "^4.5.3",
+        "@types/node": "^22.9.0",
+        "@types/yargs": "^17.0.33",
+        "cloc": "^2.2.0-cloc",
+        "husky": "^9.1.6",
+        "size-limit": "^11.1.6",
+        "size-limit-preset-node-lib": "^0.3.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.3.5",
+        "typescript": "^5.6.3",
+        "xo": "^0.58.0"
+    },
+    "keywords": [
+        "lurna",
+        "date",
+        "birthday",
+        "nodejs",
+        "cli",
+        "terminal",
+        "农历",
+        "公历",
+        "阴历",
+        "阳历",
+        "生日"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "license": "MIT"
+}
