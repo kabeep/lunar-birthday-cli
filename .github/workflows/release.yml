@@ -11,6 +11,7 @@ on:
       - '!v*beta*'
       - '!v*alpha*'
 
+jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
