@@ -67,7 +67,6 @@ birthday [选项] <日期>
 | English             |       -       |    en     |          US          | [en-US.ts][locale-en-us-url] |
 | Japanese            |      日本語      |    ja     |          JP          | [ja-JP.ts][locale-ja-jp-url] |
 | Korean              |      한국어      |    ko     |          KR          | [ko-KR.ts][locale-ko-kr-url] |
-| Malay               | Bahasa Melayu |    ms     |          MY          | [ms-MY.ts][locale-ms-my-url] |
 | Vietnamese          |  Tiếng Việt   |    vi     |          VN          | [vi-VN.ts][locale-vi-vn-url] |
 | Chinese Simplified  |     简体中文      |    zh     |          CN          | [zh-CN.ts][locale-zh-cn-url] |
 | Chinese Traditional |     繁體中文      |    zh     |          TW          | [zh-TW.ts][locale-zh-tw-url] |
@@ -107,7 +106,6 @@ birthday [选项] <日期>
 [locale-en-us-url]: src/locale/en-US.ts
 [locale-ja-jp-url]: src/locale/ja-JP.ts
 [locale-ko-kr-url]: src/locale/ko-KR.ts
-[locale-ms-my-url]: src/locale/ms-MY.ts
 [locale-vi-vn-url]: src/locale/vi-VN.ts
 [locale-zh-cn-url]: src/locale/zh-CN.ts
 [locale-zh-tw-url]: src/locale/zh-TW.ts
