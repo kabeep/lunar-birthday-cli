@@ -1,7 +1,7 @@
-import { createFactory, getLunar, type Mode, printHeading } from './helper';
-import { normalize } from './utils';
-
-export { i18n } from './shared';
+import birthday from './birthday';
+import { go } from './helper';
+import i18n from './i18n';
+import type { Mode } from './types';
 
 export interface Options {
     _: Array<string | number>;
@@ -10,18 +10,11 @@ export interface Options {
 }
 
 function main({ _, mode }: Options) {
-    const pipeline = createFactory(mode);
-
-    const input = normalize(_);
-    if (!input) return;
-
-    const date = new Date(input);
-    const lunar = getLunar(date);
-    if (!lunar) return;
-
-    const highlight = (text: string) => `\u001B[33m${text}\u001B[39m`;
-    const heading = highlight(printHeading(mode));
-    console.log(`${heading}${pipeline(lunar, date)}`);
+    const [error] = go(birthday, _, mode);
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    error && console.log(i18n(`CMD_ERR_${error?.message ?? 'UNKNOWN'}`));
 }
 
 export default main;
+
+export { default as i18n } from './i18n';

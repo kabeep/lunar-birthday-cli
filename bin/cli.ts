@@ -19,9 +19,9 @@ main(
         .options('mode', {
             alias: 'm',
             type: 'string',
-            choices: ['e', 'n', 'd', 'c'],
-            desc: 'e(gg), n(ow), d(ecade)，c(entury)',
-            default: 'e',
+            choices: ['d', 'decade', 'c', 'century'],
+            desc: 'd(ecade)，c(entury)',
+            default: 'decade',
         })
         .example(yellow('birthday 1997 05 08'), i18n('CMD_USAGE_EG_ARGS'))
         .example(yellow('birthday 1997-05-08'), i18n('CMD_USAGE_EG_ISO'))
@@ -29,8 +29,6 @@ main(
         .example(yellow('birthday 1997/05/08'), i18n('CMD_USAGE_EG_VARIANT'))
         .example(yellow('birthday May 8, 1997'), i18n('CMD_USAGE_EG_WRITTEN'))
         .example(grey('-------'), '')
-        .example(yellow('birthday 1997-5-8'), i18n('CMD_USAGE_EG_EGG'))
-        .example(yellow('birthday -m n 1997-5-8'), i18n('CMD_USAGE_EG_NOW'))
         .example(yellow('birthday -m d 1997-5-8'), i18n('CMD_USAGE_EG_DECADE'))
         .example(yellow('birthday -m c 1997-5-8'), i18n('CMD_USAGE_EG_CENTURY'))
         .epilog(grey('* ' + i18n('CMD_USAGE_EPILOG')))

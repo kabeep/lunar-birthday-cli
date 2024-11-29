@@ -1,27 +1,16 @@
 import get from 'lodash.get';
 import template from 'lodash.template';
-import locale from '../locale';
+import locale from './locale';
 
-interface NestedRecord {
-    [key: string]: string | NestedRecord;
-}
+class I18n {
+    protected readonly dictionary: Record<string, string>;
 
-type Paths<T> =
-    T extends Record<string, unknown>
-        ? {
-              [K in keyof T]: K;
-          }[keyof T]
-        : never;
-
-class I18n<T extends NestedRecord> {
-    protected readonly dictionary: NestedRecord;
-
-    constructor(locale: NestedRecord) {
+    constructor(locale: Record<string, string>) {
         this.dictionary = locale;
         this.i18n = this.i18n.bind(this);
     }
 
-    public i18n(path: Paths<T>, variables?: Record<string, string>): string {
+    public i18n(path: string, variables?: Record<string, string>): string {
         const value = get(this.dictionary, path);
 
         if (typeof value === 'string') {
@@ -41,6 +30,6 @@ class I18n<T extends NestedRecord> {
     }
 }
 
-const instance = new I18n<typeof locale>(locale);
+const instance = new I18n(locale);
 
 export default instance.i18n;

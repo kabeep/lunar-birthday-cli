@@ -3,7 +3,6 @@ import { osLocaleSync } from 'os-locale';
 import enUS from './en-US';
 import jaJP from './ja-JP';
 import koKR from './ko-KR';
-import msMY from './ms-MY';
 import viVN from './vi-VN';
 import zhCN from './zh-CN';
 import zhTW from './zh-TW';
@@ -16,7 +15,7 @@ const getZhLocale = (code: string) => {
 
         case 'zh-TW':
         case 'zh-HK': {
-            return zhTW;
+            return merge(zhCN, zhTW);
         }
 
         default: {
@@ -36,10 +35,6 @@ function getLocale() {
 
         case 'ko': {
             return koKR;
-        }
-
-        case 'ms': {
-            return msMY;
         }
 
         case 'vi': {
