@@ -23,7 +23,7 @@ export default {
     CMD_LABEL_ZODIAC: '열두 띠',
     CMD_LABEL_ANIMAL_RAT: '쥐',
     CMD_LABEL_ANIMAL_OX: '소',
-    CMD_LABEL_ANIMAL_TIGER: '범',
+    CMD_LABEL_ANIMAL_TIGER: '호랑이',
     CMD_LABEL_ANIMAL_RABBIT: '토끼',
     CMD_LABEL_ANIMAL_DRAGON: '용',
     CMD_LABEL_ANIMAL_SNAKE: '뱀',
