@@ -6,7 +6,7 @@ function birthdayIterator(value: LunarDate, startYear: number, length: number) {
     let year = startYear;
     let index = length;
     while (index-- && year++) {
-        const isLeapMonth = getLeapMonth(year) === value.month;
+        const isLeapMonth = value.isLeapMonth && getLeapMonth(year) === value.month;
         const current = { ...value, year, isLeapMonth };
         const date = toSolar(current);
         if (date === -1) {

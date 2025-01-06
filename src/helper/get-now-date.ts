@@ -3,8 +3,8 @@ import ensure from './_internal/ensure';
 
 function getNowDate(value: LunarDate): Date {
     const year = new Date().getFullYear();
-    const isLeapYear = value.isLeapMonth && Boolean(getLeapMonth(year));
-    const solar = toSolar({ ...value, year, isLeapMonth: isLeapYear });
+    const isLeapMonth = value.isLeapMonth && getLeapMonth(year) === value.month;
+    const solar = toSolar({ ...value, year, isLeapMonth });
     ensure(solar !== -1);
     return solar;
 }
